@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { UserRoutes } from '/user/user.routes';
-import { BaseRoutes } from '/base/base.routes';
+import { BaseRoutes } from './base/base.routes';
 import { DespesaRoutes } from '/despesa/despesa.routes';
 
 /**
