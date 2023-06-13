@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { isValidateObjectRequest } from './helpers/validate';
-import { loadContas, saveContas } from './helpers/load-data';
+import { isValidateObjectRequest } from '../helpers/validate';
+import { loadContas, saveContas } from '../helpers/load-data';
 
 const router = Router();
 
