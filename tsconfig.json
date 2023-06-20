@@ -6,9 +6,13 @@
     "rootDir": "src",
     "esModuleInterop": true,
     "sourceMap": true,
-		"strict": true,
-	  "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Enable decorators
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
