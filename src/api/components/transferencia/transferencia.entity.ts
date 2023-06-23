@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Conta } from '../conta/conta.entity';
 
 @Entity('transferencia')
 export class Transferencia {
@@ -21,9 +22,17 @@ export class Transferencia {
     @Column()
     descricao!: string;
 
-    @Column()
-    conta_origem_id!: number;
+    @ManyToOne(() => Conta, { eager: true })
+    @JoinColumn({
+        name: "conta_origem_id",
+        referencedColumnName: "id"
+    })
+    conta_Origem!: Conta;
 
-    @Column()
-    conta_destino_id!: number;
+    @ManyToOne(()=> Conta,{eager:true})
+    @JoinColumn({
+    name: "conta_destino_id",
+    referencedColumnName: "id"
+    })
+    conta_Destino!: Conta;
 }

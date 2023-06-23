@@ -21,6 +21,12 @@ export class Conta {
         } )
     saldo!: number;
 
+    @Column()
+    tipo!: string;
+
+    @Column()
+    sigla_tipo!: string;
+
     @Column(
         {
             type: "decimal",
